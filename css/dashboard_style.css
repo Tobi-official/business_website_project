@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: white;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: sans-serif, arial, verdana;
+}
+
+.nav_container {
+    padding: 10px 50px 3px 50px;
+    box-shadow: 0 0 5px silver;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+}
+
+.main_body {
+    flex: 1;
+    overflow: auto;
+}
+
+.sidebar {
+    box-shadow: 3px 0px 3px silver;
+    width: 300px;
+    overflow: auto;
+}
+
+.main_container {
+    display: flex;
+    padding-top: 80px;
+    height: 100vh;
+    background-color: white;
+}
+
+.logo_container img {
+    width: 60px;
+}
+
+.logout_container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logout_container a {
+    text-decoration: none;
+    color: grey;
+}
+
+.title {
+    background: #e3e5e3;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.main_content {
+    padding: 10px;
+    overflow: auto;
+    height: 75vh;
+}
+
+.sidebar_menu a {
+    text-decoration: none;
+    color: #464646;
+    
+}
+
+.sidebar_menu:hover {
+    background: #e3e5e3;
+    transition: 0.8s;
+    padding: 10px 10px 10px 50px;
+}
+
+.sidebar_menu {
+    padding: 10px 10px 10px 50px;
+}
+
+.sidebar_menu i {
+    margin: 0 20px 0 0;
+    color: darkgray;
+}
+
+.dropdown {
+    padding: 8px 0px 8px 5px;
+    display: none;
+}
+
+.dropdown_menu {
+    padding: 5px 0px;
+}
+
+.content_box {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px silver;
+    background: white;
+    flex-basis: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content_box i {
+    font-size: 40px;
+    color: white;
+}
+
+.content_box p {
+    font-size: 20px;
+    margin: 5px 0 0 0 ;
+    color: white;
+}
+
+.home_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home_container a {
+    text-decoration: none;
+    flex-basis: 300px;
+}
+
+.content_box:hover {
+    box-shadow: 0 0 10px silver;
+    opacity: .9;
+    transition: .8;
+}
+
+.box_blue {
+    background-color: #003366;
+}
+
+.box_red {
+    background-color: #6D0000;
+}
+
+.box_green {
+    background-color: green;
+}
+
+.box_orange {
+    background-color: orange;
+}
+
+.box_sky {
+    background-color: red;
+}
+
+
+/* ======== TABLE ======== */
+
+.table_format {
+    background: white;
+    box-shadow: 0 0 10px silver;
+    margin: auto;
+    border-collapse: collapse;
+    width: 100%;
+    border: none;
+}
+
+.table_format th {
+    padding: 10px;
+    border: 1px solid silver;
+    background-color: darkred;
+    color: white;
+    vertical-align: text-top;
+    white-space: nowrap;
+}
+
+.fullname_column {
+    white-space: nowrap;
+}
+
+.table_format td {
+    padding: 10px;
+    border: 1px solid silver;
+}
+
+.table_format td img {
+    width: 100%;
+}
+
+.table_format tr:nth-child(even) {
+    background-color: rgb(239, 239, 239);
+}
+
+/* ======== PROFILE IMAGE ======== */
+
+.profile_frame {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+.profile_frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ======== BUTTONS ======== */
+
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: .2s ease-in-out;
+}
+
+button:hover {
+    opacity: .8;
+    transition: .2s ease-in-out;
+}
+
+button:disabled {
+    opacity: .5;
+}
+
+.edit_button {
+    background-color: #16325e;
+    color: white;
+    opacity: 1;
+    transition: .2s ease-in-out;
+    border: 1px solid #16325e;
+}
+
+.status_button {
+    background-color: #f27d00;
+    color: white;
+    opacity: 1;
+    transition: .2s ease-in-out;
+}
+
+.delete_button {
+    background-color: #a60202;
+    color: white;
+    opacity: 1;
+    transition: .2s ease-in-out;
+    border: 1px solid #a60202;
+}
+
+.primary_button {
+    background: #fc920f;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.primary_button:hover {
+   opacity: .9;
+   transition: .5s ease-in-out;
+}
+
+.primary_button:active {
+    border: 2px solid #fad006;
+    transform: scale(.9);
+    transition: .5s ease-in-out;
+ }
+
+.edit_profile_link {
+    display: block;
+    margin: 10px 0;
+}
+
+/* ======== FORM ======== */
+
+
+.form_container {
+    background-color: white;
+    box-shadow: 0px 0px 10px silver;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+.form_control {
+    padding: 5px 10px;
+}
+
+.form_input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    display: block;
+    border: 1px solid silver;
+    outline: none;
+    margin: 20px 0;
+}
+
+.form_container h2 {
+    text-align: center;
+    color: orange;
+}
+
+.form_button {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: orange;
+    border: 0;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form_input.profile {
+    margin: 5px 0 20px 0;
+}
+
+
+/* Comments Styles */
+
+.form_contain {
+    border: 1px solid #e3e5e3;
+    padding: 20px;
+}
+
+
+.form_contain h3 {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.form_contain label {
+    display: block;
+    width: 100%;
+}
+
+.input_box:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.form_inputs {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #e3e5e3;
+    font-size: 16px;
+}
+
+
+.form_inputs:focus {
+    border: 1px solid orange;
+    outline: none;
+}
+
+button
+{
+    background-color: #fa7000;
+    padding: 8px 10px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid #fa7000;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.post_category_button {
+    margin-top: 20px;
+}
+
+.input_box i {
+    margin: 0 0 0 5px;
+}
+
+/*========== ALERT MSG ========*/
+
+.message_container {
+    margin: 10px 0;
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+
+}
+
+.success_msg {
+    display: none;
+    padding: 10px;
+    background-color: #deffd6;
+    color: #146300;
+}
+
+.fail_msg {
+    display: none;
+    padding: 10px;
+    background-color: #fff0e0;
+    color: #6b0000;
+}
